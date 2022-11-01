@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int countOccurances(int n, int digit){
+int countOccurances(int n, int digit){ //count how many times we see a given digit in N
     if(digit > 9 || digit < 0) return -1;
 
     int result = 0;
@@ -14,7 +14,8 @@ int countOccurances(int n, int digit){
     return result;
 }
 
-int repeatDigit(int n, int k){
+int repeatDigit(int n, int k){ //repeats the digit N K times
+    if(n > 9 || n < 0) return -1;
     int result = 0;
     for(int i = 0; i < k; i++){
         result *= 10;
@@ -23,7 +24,8 @@ int repeatDigit(int n, int k){
     return result;
 }
 
-int myPow(int x, int n){
+int myPow(int x, int n){ // returns x^n
+    if(n < 1) return -1;
     int result = 1;
     for(int i = 0; i < n; i++){
         result *= x;
